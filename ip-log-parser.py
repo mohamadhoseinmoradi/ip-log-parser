@@ -1,6 +1,6 @@
 ip_dict = {}
 
-with open("file.txt", "r") as file:
+with open("ip.log", "r") as file:
     for file in file:
         ip = file.split(" ")[0]
         if ip not in ip_dict:
