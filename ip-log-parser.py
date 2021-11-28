@@ -1,12 +1,12 @@
 ip_dict = {}
 
 with open("file.txt", "r") as file:
-    for i in file:
-        i = i.split(" ")[0]
-        if i not in ip_dict:
-            ip_dict[i] = 1
+    for file in file:
+        ip = file.split(" ")[0]
+        if ip not in ip_dict:
+            ip_dict[ip] = 1
         else:
-            ip_dict[i] += 1
+            ip_dict[ip] += 1
 
 new_ip_dict = dict(sorted(ip_dict.items(), key= lambda item: item[1], reverse=True)[:5])
 #print (*new_ip_dict.items(), sep="\n")
